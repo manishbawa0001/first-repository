@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: apache2-deployment
   labels:
-    app: apache2
+    run: apache2
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: apache2
+      run: apache2
   template:
     metadata:
       labels:
-        app: apache2
+        run: apache2
     spec:
       containers:
       - name: apache2
